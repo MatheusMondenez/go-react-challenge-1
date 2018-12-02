@@ -10,14 +10,17 @@ class App extends Component {
       {
         author: 'Matheus Mondenez Paulino',
         content: 'Teste teste',
+        time: 'Há 30 minutos',
       },
       {
         author: 'Michel Mondenez Paulino',
         content: 'Esse é feio que dói',
+        time: 'Há 1 hora',
       },
       {
         author: 'Mais um teste',
         content: 'Teste teste',
+        time: 'Há 2 horas',
       },
     ],
   };

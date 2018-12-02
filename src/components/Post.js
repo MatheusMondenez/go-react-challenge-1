@@ -8,7 +8,7 @@ export default class Post extends Component {
   render() {
     return (
       <div className="post">
-        <PostHeader name={this.props.data.author} />
+        <PostHeader time={this.props.data.time}>{this.props.data.author}</PostHeader>
         <hr />
         <p>{this.props.data.content}</p>
       </div>

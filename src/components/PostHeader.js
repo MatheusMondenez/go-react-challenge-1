@@ -9,8 +9,8 @@ export default class PostHeader extends Component {
     return (
       <div className="post-header">
         {/* <img src={profile} /> */}
-        <strong>{this.props.name}</strong>
-        <p className="post-time">Há 1 hora</p>
+        <strong>{this.props.children}</strong>
+        <p className="post-time">{this.props.time}</p>
       </div>
     );
   }
