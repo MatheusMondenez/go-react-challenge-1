@@ -23,10 +23,12 @@ class App extends Component {
   };
 
   render() {
+    const post = this.state.posts.map((post, index) => <Post key={index} data={post} />);
+
     return (
       <Fragment>
         <Header />
-        <Post data={this.state.posts[1]} />
+        {post}
       </Fragment>
     );
   }
