@@ -1,15 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import '../../css/style.scss';
 
-const Header = props => <div className="page-header">{props.children}</div>;
-
-Header.defaultProps = {
-  children: 'Rocketbook',
-};
-
-Header.propTypes = {
-  children: PropTypes.string,
-};
+const Header = () => (
+  <div className="header">
+    <h3>Rocketbook</h3>
+  </div>
+);
 
 export default Header;

@@ -1,17 +1,22 @@
 import React, { Component, Fragment } from 'react';
-import { render } from 'react-dom';
 import PropTypes from 'prop-types';
-import '../../css/style.scss';
 import PostHeader from './PostHeader';
 
-export default class Post extends Component {
-  render() {
-    return (
-      <div className="post">
-        <PostHeader time={this.props.data.time}>{this.props.data.author}</PostHeader>
-        <hr />
-        <p>{this.props.data.content}</p>
-      </div>
-    );
-  }
-}
+const Post = props => (
+  <div className="post">
+    <PostHeader avatar={props.data.avatar} name={props.data.name} time={props.data.time} />
+    <p>{props.data.body}</p>
+  </div>
+);
+
+Post.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Post;

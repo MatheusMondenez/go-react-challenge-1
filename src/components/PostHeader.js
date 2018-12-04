@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
-import '../../css/style.scss';
-// import profile from '../../img/profile.jpg';
 
-export default class PostHeader extends Component {
-  render() {
-    return (
-      <div className="post-header">
-        {/* <img src={profile} /> */}
-        <strong>{this.props.children}</strong>
-        <p className="post-time">{this.props.time}</p>
-      </div>
-    );
-  }
-}
+const PostHeader = props => (
+  <div className="post-header-container">
+    <img className="avatar" src={props.avatar} alt="avatar" />
+    <div className="data-container">
+      <strong>{props.children}</strong>
+      <span>{props.time}</span>
+    </div>
+  </div>
+);
+
+PostHeader.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+};
+
+export default PostHeader;
